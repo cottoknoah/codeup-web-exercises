@@ -1,8 +1,53 @@
-h1 {
-    color: red;
+h1, h2, h3 .fancy-header {
+    color:darkred;
+    text-decoration: underline;
+
 }
 
-.fancy-header {
-    color:cornflowerblue;
-    text-decoration: underline
+h1 {
+ text-align: center;
+ font-size: 50px;
+}
+
+main {
+    text-align: center;
+    font-size: 22px;
+}
+
+body {
+    color: ghostwhite;
+    background-image: url("../images/wood.2.jpg");
+    background-repeat: repeat;
+    background-size: auto;
+    background-color:whitesmoke;
+    font-family: 'Baloo Thambi 2', cursive;
+    font-size: 20px;
+}
+
+ul, li {
+    color:whitesmoke;
+    margin-left: 25px;
+    padding-left: 10px;
+}
+
+table, th, td,tr {
+    border: 5px solid black;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+a:link {
+    color: darkred;
+    text-decoration: underline;
+    cursor: auto;
+}
+
+a:hover {
+    color: darkblue;
+    font-size: 30px;
+}
+
+a:visited {
+    color: purple;
 }
