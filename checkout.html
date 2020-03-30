@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+</head>
+    <body>
+            <form action="http://request-inspector.glitch.me/">
+        <label for="pw">Credit Card Number</label>
+        <input id="pw" name="pw" type="password">
+        <br>
+                <!-- Month does not work in Firefox  Open in Chrome or Opera-->
+        <label for="expmonth">Expiration Month and Year</label>
+        <input id="expmonth" name="expmonth" type="month">
+        <br>
+        <label for="code">Security Code</label>
+        <input id="code" name="code" type="password">
+        <br>
+        <label for="address">Billing Address</label>
+                <textarea name="address" id="address" cols="30" rows="10">Enter Address Here</textarea>
+        <br>
+        <label for="credit">Keep this credit card on file</label>
+        <input id="credit" name="credit" type="checkbox" value="add-to-list">
+        <br>
+        <button type="submit">Buy Now!</button>
+            </form>
+    </body>
+</html>
