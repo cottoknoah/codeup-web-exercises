@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Warmup</title>
+</head>
+<body>
+
+<script>
+
+    // Write a JavaScript function that takes in a string input and
+    // returns true if the input is at least 8 characters in length.
+    // It should return false for all other string inputs.
+    // Week 2 Day 6
+
+    "use strict";
+
+function isAtLeastEightLong(x) {
+    if (str.length >= 8) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+    console.log(isAtLeastEightLong("cat")); // false
+    console.log(isAtLeastEightLong("cottoknoah")) //true
+
+  //  Write a function, twoMoreAwayFromZero that takes in a number input and returns a number two more away
+    //  from zero than the original input. Negative number inputs will be reduced by two and
+    //  positive numbers and zero will be increased by two.
+      //  Examples:
+    //twoMoreAwayFromZero(2) will return 4
+    //twoMoreAwayFromZero(0) will return 2
+    //twoMoreAwayFromZero(0.5) will return 2.5
+    //twoMoreAwayFromZero(-2) will return -4
+    //twoMoreAwayFromZero(-3.5) will return -5.5
+    //Week 2 Day 7
+
+    function addTwo(num) {
+        if (num >= 0) {
+            return num +2;
+        } else {
+            return num - 2;
+        }
+    }
+
+    console.log(twoMoraeAwayFromZero(2)); //4
+    console.log(twoMoreAwayFromZero(0)); // will return 2
+    console.log(twoMoreAwayFromZero(0.5)); // returns 2.5
+    console.log(twoMoreAwayFromZero(-2)); // returns -4
+</script>
+</body>
+</html>

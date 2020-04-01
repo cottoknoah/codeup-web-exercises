@@ -1,3 +1,8 @@
+html, body {
+    height: 100%;
+    text-align: center;
+}
+
 h1, h2, h3 .fancy-header {
     color:darkred;
     text-decoration: underline;
@@ -5,12 +10,12 @@ h1, h2, h3 .fancy-header {
 }
 
 h1 {
- text-align: center;
+ /*text-align: center;*/
  font-size: 50px;
 }
 
 main {
-    text-align: center;
+    /*text-align: center;*/
     font-size: 22px;
 }
 
@@ -26,15 +31,16 @@ body {
 
 ul, li {
     color:whitesmoke;
-    margin-left: 25px;
-    padding-left: 10px;
+    margin-left: -55px;
+    list-style-position: inside;
 }
 
 table, th, td,tr {
+    margin-left: 480px;
     border: 5px solid black;
     color: white;
     padding: 15px;
-    text-align: center;
+
 }
 
 a:link {
