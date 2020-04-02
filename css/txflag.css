@@ -1,0 +1,22 @@
+.root {
+  --main-bg: #181818;
+  --link-color: red;
+  --main-link-color: #ffffff;
+  --separator-color: blue;
+}
+
+.flag {
+  background-color: var(--main-bg);
+}
+
+.box1 {
+  background-color: var(--main-link-color);
+  positition: relative;
+  width: 10px;
+  height: 10px;
+  margin: 10px;
+}
+
+.box2 {
+
+}
