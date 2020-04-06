@@ -1,19 +1,19 @@
 .root {
   --main-bg: #181818;
   --link-color: red;
-  --main-link-color: #ffffff;
-  --separator-color: blue;
+  --separator-color: #ffffff;
+  --light-bg: blue;
+}
+
+* {
+  box-sizing: border-box;
+
 }
 
 .flag {
-  background-color: var(--main-bg);
-}
-
-.box1 {
-  background-color: var(--main-link-color);
   positition: relative;
-  width: 10px;
-  height: 10px;
+  width: 500px;
+  height: 500px;
   margin: 10px;
 }
 
