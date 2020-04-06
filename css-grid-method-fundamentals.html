@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid Fundamentals</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            text-align: center;
+            /*    this was added when inline-grid display was added*/
+        }
+        main {
+            background: lightgreen;
+            /* inline-grid movement only inside grid not around like display: grid*/
+            display: inline-grid;
+            width: 600px;
+            height: 600px;
+            /* % and 3m work also but differently*/
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            /* fr = fractional units */
+            grid-template-rows: 1fr 1fr 1fr;
+            /*grid-template-columns: repeat(3, 200px);*/
+            /*repeat function sets a size for multiple tiles*/
+            /*grid-template-rows: 200px 200px 200px;*/
+            /*grid gap - space out grid cells making it larger*/
+            /*grid-column-gap: 2em;*/
+            /*justify-content: center;*/
+        }
+        main div {
+            font-size: 2em;
+            color: white;
+            background: grey;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+</main>
+</body>
+</html>
