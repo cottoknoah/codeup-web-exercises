@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    /*background-color: yellow;*/
+
+}
+.wrapper {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-gap: 5px;
+    grid-template-areas:
+            "header header header"
+            "nav article section"
+            "nav footer footer";
+    height: 100vh;
+}
+
+header {
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: flex-start;*/
+    grid-area: header;
+    background-color: cornflowerblue;
+}
+nav {
+    grid-area: nav;
+    background-color: #0fb784;
+}
+article {
+    grid-area: article;
+    background-color: aqua;
+}
+section {
+    grid-area: section;
+    background-color: mediumpurple;
+}
+footer {
+    grid-area: footer;
+    background-color: coral;
+}
