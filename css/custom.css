@@ -1,15 +1,11 @@
 .jumbotron {
     background-image: url("../images/pizza.png");
-    /*background-size: 100%;*/
+    background-size: 100%;
 }
-
-h1 {
-
-}
-
-/* Small devices (phones and pocket devices, 576 and up) */
-@media screen and (min-width:576px) {
-    .jumbotron {
-        display: none;
-    }
+.jumbotron-fluid h1 {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    background-color: white;
+    opacity: 0.5;
 }

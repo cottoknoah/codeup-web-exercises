@@ -2,20 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width-device-width, initial-scale-1">
+    <meta name="viewport" content="width-device-width, initial-scale-1, shrink-to-fit-no">
+<!--Figure out what shrink to fit does-->
     <title>Pizza World</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" src="https://kit.fontawesome.com/da30200d10.js" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/custom.css"> <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/da30200d10.js" crossorigin="anonymous"></script>
+<!--    Check if Link for icon works-->
+    <link rel="stylesheet" href="css/custom.css">
     <style>
         body {
             margin: 2px;
         }
 
         .my-container {
-            /*border: 5px solid green;*/
+            margin-top: 5px;
         /*    not needed - clean up later */
         }
         .nav>div {
@@ -37,53 +38,84 @@
     <body>
      <form method="POST" action="https://request-inspector.glitch.me/">
 
-         <main class="container">
-
-            <div class="my-container">
-
-             <nav class="navbar-fixed-top">
+         <div class="container my-container">
 
 
-                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Pizza World</a>
-                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Order online</a>
-                    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Menu</a>
+             <nav class="nav-fixed-top">
 
+<!--Search what role classes are-->
+                <ul class="nav nav-tabs justify-content-between">
+                    <li><a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#" aria-controls="nav-home" aria-selected="true">Pizza World</a></li>
+                    <li><a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#" aria-controls="nav-profile" aria-selected="false">Order online</a></li>
+                    <li><a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#" aria-controls="nav-contact" aria-selected="false">Menu</a></li>
 <!--Below is the Zip code & Search buttons / Check them on glitch later-->
-                        <span class="nav nav-tabs form-inline" role="tablist">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Zip code" role="tab"  aria-label="Search">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search stores near you!</button>
-                        </span>
-<!--Below: Work on Icon-->
-                   <a class="navbar nav-link">
-                       <button class="custom-button"><i class="fas fa-user-alt" aria-hidden="true" style="color:mediumpurple"></i></button>
-                   </a>
-                        <span class="navbar-nav mr-auto navbar-text">Sign Up</span>
-                    </a>
-<!--Extra Map Stuff           <div id="map"></div>-->
-                </div>
-
-            </nav>
-
-                <div class="jumbotron jumbotron-fluid">
+                    <li><span class="nav nav-tabs">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Zip code"  aria-label="Search"></span>
+                    </li>
+                    <li><button class="nav nav-tabs btn btn-outline-dark " type="submit">Search stores near you!</button>
+                        </li>
+<!--Below: Icon / Sign Up-->
+                    <li><a><span class="nav nav-tabs nav-link nav-text">
+                        <i class="fas fa-user-astronaut"></i>Sign Up</span></a></li>
+                </ul>
+             </nav>
+<!--Below: Work on hiding for small devices-->
+                <div class="jumbotron jumbotron-fluid .d-sm-none .d-md-block">
                     <div class="container">
-<!--                        <h1 class="display-4">Welcome to Pizza World</h1>-->
+                        <h1 class="display-4">Welcome to Pizza World</h1>
                     </div>
                 </div>
+                <h2>Build your Own Pizza!</h2>
+             <br>
+<!--Below: Tbs w/ Badges-->
+             <div class="container">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#"><span class="badge-pill badge-secondary data-toggle=tab">1</span>Size and crust</a></li>
+                    <li><a href="#"><span class="badge-pill badge-secondary data-toggle=tab">2</span>Cheese and Sauce</a></li>
+                    <li><a href="#"><span class="badge-pill badge-secondary data-toggle=tab">3</span>Toppings</a></li>
+                </ul>
 
-        </main>
+<!--Create Cards within each tab -->
+                 <div class="card" style="border: ">
+                     <div class="card-header text-white" role="tab" id="X1" style="background-color: blue">
+                         Choose size and crust
+                     </div>
+<!--                     <div class="card-body text-white" style="background-color: blue">-->
+
+<!--                     </div>-->
+                 </div>
+
+
+
+<!--                 <div class="tab-content">-->
+<!--                     <div id="home" class="tab-pane fade in active">-->
+<!--                         <h3>HOME</h3>-->
+<!--                         <p>Some content.</p>-->
+<!--                     </div>-->
+<!--                     <div id="menu1" class="tab-pane fade">-->
+<!--                         <h3>Menu 1</h3>-->
+<!--                         <p>Some content in menu 1.</p>-->
+<!--                     </div>-->
+<!--                     <div id="menu2" class="tab-pane fade">-->
+<!--                         <h3>Menu 2</h3>-->
+<!--                         <p>Some content in menu 2.</p>-->
+<!--                     </div>-->
+<!--                 </div>-->
+
+<!--             </div>-->
+
+
+        </div>
+
+
+
+
 
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-         <!--        <script type='text/javascript' src='http://code.jquery.com/jquery-1.11.1.min.js'></script>-->
-<!--        <script type="text/javascript" src="mapdata.js"></script>-->
-<!--        <script type="text/javascript" src="countymap.js"></script>-->
-<!--        <script type="text/javascript" src="zipsearch.js"></script>-->
-<!--        <script>-->
-<!--            simplemaps_zipsearch.map=simplemaps_countymap; // tells the script which map to work with-->
-<!--        </script>-->
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
      </form>
     </body>
