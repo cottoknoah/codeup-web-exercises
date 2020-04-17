@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notes</title>
+</head>
+<body>
+
+================================= JAVASCRIPT OVERVIEW
+Topics covered...
+Quick History
+Definition
+Use Cases
+Examples
+-- JS: History --
+Developed in 10 days the mid-90's by Brendan Eich for the NetScape browser
+https://thenewstack.io/brendan-eich-on-creating-javascript-in-10-days-and-what-hed-do-differently-today/
+Standerdized by Ecma (formally the European Computer Manufactures Association) in 1997 (JS is often referred to as ECMAScript)
+Began taking over the browser world by the mid-2000s with the rise of competing browsers using AJAX
+ES5 - older, core language we will start learning about
+
+ES6 / ES 2015 - a major series of changes to the language with a lot of added syntactic sugar
+ES 2016 - the beginning of TC39 process https://2ality.com/2015/11/tc39-process.html
+ES 2017
+ES 2018
+ES 2019
+ES 2020
+-- JS Definition: High Level / Interpreted / Dynamically Typed / Programming Language  --
+The dominant language for client-side (browser) scripting
+JS also used server-side (using Node JS)
+Low-Level programming languages typically use more verbose code to write more explicit instructions to be executed by the system running the code.
+*High-Level programming languages typically use shorter and simpler syntax to write more implicit instructions to be executed by the system running the code.
+LOW ABSTRACTION
+Binary (101010 01010001 010001010 0100101001)
+->Assembly
+->C
+->C++
+->C# / Java
+->PHP / JavaScript / Python
+->SQL
+-> Human Language
+-> Graphical symbolism
+HIGH ABSTRACTION
+*Interpreted: code runs through an interpreter before being executed vs. compiled first then run directly.
+*Dynamically typed: variable types determined when code runs, not when written, also may change between different data types.
+
+-- JS: Uses --
+By far the most common and perhaps the most important programming language in web development, especially client-side scripting:
+- Facilitate user interaction on a page
+- Dynamically change the content and styling of a page
+- Listen and respond to events on a page (clicks, scrolls, passage of time, keyboard presses, etc.)
+- Make HTTP requests to retrieve data without a page refresh (AJAX)
+Can be used for back end/server-side programming (Node.js)
+Browsers typically contain a graphical engine and a JavaScript engine (e.g. V8 for Google Chrome)
+The JavaScript engine runs JavaScript code that may be running on a web page
+***See examples of sites without JS***
+JavaScript will be our first language to handle procedural logic (if blank, blank happens...)
+Much of what we learn will transfer over to Java and other programming languages.
+CNN, BBC, Magnolia, DPS
+================================= JAVASCRIPT INTRO
+https://www.w3.org/wiki/JavaScript_best_practices
+Console
+Comments
+Running code
+Expressions vs. Statements (can resolve to a single value vs. actions of the code)
+================================= DATA TYPES (w / exercise)
+6 Primative Types (immutable)
+boolean - truthy / falsy
+number
+string
+undefined
+symbol
+bigInt
+1 Weird Type
+null (can be treated as a primative type)
+Everything else is an object (even functions)
+Built-in Objects: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects#Standard_objects_by_category
+
+Web API Objects: https://developer.mozilla.org/en-US/docs/Web/API
+
+Global Window Object: https://developer.mozilla.org/en-US/docs/Web/API/Window
+================================= OPERATORS (w / exercise)
+typeof
+math operators
+modulus
+concatentation
+logical operators
+comparison operators
+type coercion vs. conversion
+https://www.freecodecamp.org/news/js-type-coercion-explained-27ba3d9a2839/
+data types can be coerced into one of the following:
+boolean
+number
+string
+================================= VARIABLES
+Variable: A container for a value, referred to by a declared placeholder name
+- don't use reserved words
+- use camelCase
+- keep it semantic but not too long
+Constant: A sealed container for a value, referred to by a declared placeholder name
+================================= PUTTING IT ALL TOGETHER (w / exercise)
+Shorthand assignment operators
+Unary operators
+pre-increment/decrement vs. post-increment/decrement
+Converting between strings and numbers
+String methods
+-- Example Exercise --
+You own a lawn mowing business. You charge $30 per hour and can mow 5 standard residential lawns per day. Assuming you make  $1200 a week working 5 days per week, what is the average number of billable hours per lawn?
+var hourlyRateDollars = 30;
+var weeklyRevenueDollars = 1200;
+var dailyLawnsMowed = 5;
+var businessDays = 5;
+var weeklyNumberOfLawns = businessDays * dailyCustomerAmount;
+var averageBillableHoursPerLawn = (weeklyRevenueDollars / weeklyNumberOfLawns) / hourlyRateDollars;
+
+
+</body>
+</html>
