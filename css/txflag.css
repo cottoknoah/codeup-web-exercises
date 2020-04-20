@@ -7,11 +7,9 @@
 
 * {
   box-sizing: border-box;
-
 }
-
 .flag {
-  positition: relative;
+  position relative;
   width: 500px;
   height: 500px;
   margin: 10px;
