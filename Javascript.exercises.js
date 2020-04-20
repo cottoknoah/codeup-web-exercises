@@ -126,6 +126,7 @@ y = 3;
 
 var movieTotalRentedPrice = (littleMermaid + brotherBear + hercules) * (pricePerDay).toFixed(3);
 
+console.log(movieTotalRentedPrice);
 
 /*
 Suppose you're working as a contractor for 3 companies: Google, Amazon and Facebook, they pay you a different rate per hour. Google pays $400, Amazon $380, and Facebook $350.
@@ -169,7 +170,7 @@ var schedule = 'c';
 
 var notOkToEnroll = ((fullClass || notFullClass) && schedule ) === true;
 
-
+console.log(notOkToEnroll);
 /*
 A product offer can be applied only if a person buys more than 2 items, and the offer has not expired. Premium members do not need to buy a specific amount of products.
  */
@@ -183,12 +184,18 @@ A product offer can be applied only if a person buys more than 2 items, and the 
 var username = 'codeup';
 var password = 'notastrongpassword';
 
-function strongPassword = (str); {
- if (str.length > 5 );
-} return true;
+var username = 'codeup';
+var password = 'notastrongpassword';
+var minLength = 5;
+var maxLength = 20;
+var hasMinLength = password.length >= minLength;
+var hasNoUserName = password.indexOf(username) < 0;
+var hasMaxLength = password.length <= maxLength;
+var isTrim;
 
+var passValid = hasMinLength && hasNoUserName && hasMaxLength && isTrim;
 
-
+console.log(passValid);
 
 
 /*
