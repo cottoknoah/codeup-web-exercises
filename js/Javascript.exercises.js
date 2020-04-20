@@ -132,32 +132,32 @@ console.log(movieTotalRentedPrice);
 Suppose you're working as a contractor for 3 companies: Google, Amazon and Facebook, they pay you a different rate per hour. Google pays $400, Amazon $380, and Facebook $350.
 How much will you receive in payment for this week? You worked 10 hours for Facebook, 6 hours for Google and 4 hours for Amazon.
  */
-a = 400;
-b = 380;
-c = 350;
-
-d = 6;
-e = 4;
-f = 10;
-
-
-var googleHourlyDollars = a;
-var amazonHourlyDollars = b;
-var facebookHourlyDollars = c;
-
-var hoursWorkedAtGoogle = d;
-var hoursWorkedAtAmazon = e;
-var hoursWorkedAtFacebook = f;
-
-// var daysWorkedPerWeek = x;
-
-var googlePaidDollars = (googleHourlyDollars) * (hoursWorkedAtGoogle);
-var amazonPaidDollars = (amazonHourlyDollars) * (hoursWorkedAtAmazon);
-var facebookPaidDollars = (facebookHourlyDollars) * (hoursWorkedAtFacebook);
-
-var combinedWeeklyPay = (googlePaidDollars) + (amazonPaidDollars) + (facebookPaidDollars);
-
-console.log(combinedWeeklyPay);
+// a = 400;
+// b = 380;
+// c = 350;
+//
+// d = 6;
+// e = 4;
+// f = 10;
+//
+//
+// var googleHourlyDollars = a;
+// var amazonHourlyDollars = b;
+// var facebookHourlyDollars = c;
+//
+// var hoursWorkedAtGoogle = d;
+// var hoursWorkedAtAmazon = e;
+// var hoursWorkedAtFacebook = f;
+//
+// // var daysWorkedPerWeek = x;
+//
+// var googlePaidDollars = (googleHourlyDollars) * (hoursWorkedAtGoogle);
+// var amazonPaidDollars = (amazonHourlyDollars) * (hoursWorkedAtAmazon);
+// var facebookPaidDollars = (facebookHourlyDollars) * (hoursWorkedAtFacebook);
+//
+// var combinedWeeklyPay = (googlePaidDollars) + (amazonPaidDollars) + (facebookPaidDollars);
+//
+// console.log(combinedWeeklyPay);
 
 /*
 A student can be enrolled in a class only if the class is not full and the class schedule does not conflict with her current schedule.
