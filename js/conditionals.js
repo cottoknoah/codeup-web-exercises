@@ -133,8 +133,8 @@
 // //  * function to show it to the user.
 // //  */
 
-// var pickColor = prompt("Enter a color: ");
-// alert(analyzeColor(pickColor));
+var pickColor = prompt("Enter a color: ");
+alert(analyzeColor(pickColor));
 
 
 // // /* ########################################################################## */
@@ -165,7 +165,7 @@
 // var luckyPercentFour= .50; // 4 is 50%
 // var luckyPercentFiveFree; // 5 all is free
 
-
+//---------
 var discount = 0; // no discount
 
 function calculateTotal(luckyNumber, totalAmount) {
@@ -192,6 +192,24 @@ function calculateTotal(luckyNumber, totalAmount) {
     return discount * totalAmount;
 }
 
+var luckyNumber = true;
+
+function calculateTotal(luckyNumber,totalAmount) {
+
+    if (Number(luckyNumber === 0)) {
+        return "No discount, sorry"; // no discount
+    } else if (Number(luckyNumber === 1)) {
+        return Number(.10); // 10% discount
+    } else if (Number(luckyNumber === 2)) {
+        return Number(.25); // 25% discount
+    } else if (Number(luckyNumber === 3)) {
+        return Number(.35); // 35% discount
+    } else if (Number(luckyNumber === 4)) {
+        return Number(.50); // 50% discount
+    }
+    return (luckyNumber * totalAmount);
+}
+
 console.log(calculateTotal(0, 100), 100);
 console.log(calculateTotal(4, 100), 50);
 console.log(calculateTotal(5, 100), 0);
@@ -209,7 +227,7 @@ console.log(calculateTotal(5, 100), 0);
 var luckyNumber = Math.floor(Math.random() * 6);
 
 
-var totalBill = prompt('Here is your total bill:'); {
+var totalBill = prompt('What is your total bill?'); {
     console.log(calculateTotal());
 }
 
