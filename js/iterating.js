@@ -14,7 +14,7 @@
      * Create a log statement that will log the number of elements in the names
      * array.
      */
-    console.log(names);
+    console.log(names.length);
 
     /**
      * TODO:
@@ -37,8 +37,8 @@
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
-        names.forEach(function(names) {
-            console.log(names);
+        names.forEach(function(name) {
+            console.log(name);
         });
 
 
@@ -56,7 +56,7 @@
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
-
+// MY solution
     var first = [1,2,3,4,5];
     var second = [1,2,3,4,5];
     var last = [1,2,3,4,5];
@@ -65,5 +65,24 @@
     console.log(second[1]);
     console.log(last[last.length - 1]);
 
-
+    //Below is the teachers solution
+    //
+    // var numbers = [1,2,3,4,5];
+    //
+    // function first(arr) {
+    //     return arr[0];
+    // }
+    //
+    // function second(arr) {
+    //     return arr[1];
+    // }
+    //
+    // function last(arr){
+    //     return arr[arr.length-1];
+    // }
+    //
+    // console.log(first(numbers));
+    // console.log(second(numbers));
+    // console.log(last(numbers))
+;
 })();
