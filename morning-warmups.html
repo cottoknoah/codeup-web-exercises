@@ -128,15 +128,38 @@
 
     // WEEK 6 - DAY 23 : APR 30th, 2020
 
-    var favoriteTVShows = [ 'a','b', 'c'];
-    var a = 'a';
-    var b = 'b';
-    var c = 'c';
+    // var favoriteTVShows = [ 'a','b', 'c'];
+    // var a = 'a';
+    // var b = 'b';
+    // var c = 'c';
+    //
+    //     favoriteTVShows.forEach(function(show) {
+    //         console.log(show);
+    //     })
 
-        favoriteTVShows.forEach(function(show) {
-            console.log(show);
-        })
 
+    //WEEK SIX
+
+    //     Write a function that prints the numbers from 1 to 100
+    //     For numbers divisible by 3, print “Fizz”
+    // For numbers divisible by 5, print “Buzz”
+    // For numbers divisible by both 3 and 5, print “FizzBuzz”
+
+    function fizzBuzz() {
+        var i = 1;
+        while(i <= 100) {
+            if(i % 3 === 0 && i % 5 === 0) {
+                console.log("FizzBuzz");
+            } else if(i % 3 === 0) {
+                console.log("Fizz");
+            } else if(i % 5 === 0) {
+                console.log("Buzz");
+            } else {
+                console.log(i);
+            }
+            i++;
+        }
+    }
 
 
 </script>
