@@ -57,87 +57,35 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+// 12% after 200
+// print out person, amount before, amount after discount
 
+
+
+// This is an array of shopper objects
     var shoppers = [
-        {
-            name: 'Cameron',
-            amount: 180,
-            totalAmount: "discount",
-            discount: function() {
-                if (this.totalAmount === "more than $200") {
-                    this.totalAmount = "discount";
-                } else if ( this.totalAmount === "less than $200"){
-                    this.totalAmount = "no dsicount";
-                }
-            }
-            // return this.totalAmount;
+            {name: 'Cameron', amount: 180},
+            {name: 'Ryan', amount: 250},
+            {name: 'George', amount: 320}
+        ];
 
-},
-    {
-        name: 'Ryan',
-            amount: 250,
-        totalAmount: "discount",
-        discount: function() {
-        if (this.totalAmount === "more than $200") {
-            this.totalAmount = "discount";
-        } else if ( this.totalAmount === "less than $200"){
-            this.totalAmount = "no dsicount";
+    shoppers.forEach(function (shopperItem) {
+        // object is shoperItem
+        var amount = shopperItem.amount;
+        if (amount >= 200) {
+            // get 12% of total and reassign total to the new value
+            amount = amount - (amount * .12);
         }
-    }
-
-    },
-    {
-        name: 'George',
-            amount: 320,
-        totalAmount: "discount",
-        discount: function() {
-        if (this.totalAmount === "more than $200") {
-            this.totalAmount = "discount";
-        } else if ( this.totalAmount === "less than $200"){
-            this.totalAmount = "no dsicount";
-        }
-    }
-    },
-];
-
-    console.log(discount());
-
-    //   for (var i = 0; i > 200; i++) {
-    //     if (shoppers[i].amount === "You get a discount!")
-    //};
-
-//  shoppers.forEach(function(shop) {
-    //  console.log(shoppers.amount);
-
-
-    shoppers.forEach(function(shop) {
-        var str = "";
-        if (shoppers.amount.length > 200) {
-            shoppers.amount.forEach(functio
-
-            n (amount, i, arr) {
-                if (i === arr.length - 1) {
-                    str += amount + " is your total."
-                } else {
-                    str += amount + ", "
-                }
-            });
+        if (amount !== shopperItem.amount) {
+            var discount = shopperItem.amount - amount;
+            console.log("Congratulations " + shopperItem.name + ". " + "You spent $" + shopperItem.amount +
+                " and got a discount of $" + discount.toFixed(2) + " and paid $" + amount.toFixed(2) +
+                " total.");
         } else {
-            str = shoppers.amount + ".";
+            console.log("Sorry, " + shopperItem.name + ". " + "You spent $" + shopperItem.amount + " and did not get a discount.");
         }
-        console.log(shoppers.name + " has a 12% discount of " + str);
     });
-    // Your program will have to:
-    // - display a line with the name of the person
-    // - amount before the discount, the discount
-    // - the discount, if any, and the amount after the discount
-    // - Use a foreach loop to iterate through the array
-    // -  console.log the relevant messages for each person
+
 
     //=======================================================================
 
@@ -154,7 +102,7 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
-    / var books = [ {book1, book2, book3];
+    // var books = [ {book1, book2, book3];
 
     var books = [
         {
@@ -205,11 +153,13 @@
     console.log("The title of the first book is " + books[0].title + "!");
     console.log("\n" + "The author's first name of the third book is " + books[2].author.firstName + ".");
     console.log("\n" + "The final book's author's last name is " + books[5].author.lastName + ".");
+    console.log("\n");
 
-
+    //use of a for each loop
     books.forEach(function(book) {
-        console.log("\n" + book.title);
+        console.log(book.title);
     });
+
 
 
     /**
@@ -237,6 +187,17 @@
      *      ...
      */
 
+    console.log("\n");
+
+    for (var i = 0; i < books.length; i++) {
+        var bookNum = i + 1;
+        console.log("---");
+        console.log("Book # " + bookNum);
+        console.log("Title: " + books[i].title);
+        console.log("Author: " + books[i].author.firstName + " " + books[i].author.lastName);
+    }
+
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -247,5 +208,12 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    // function createBook (title, firstName, lastName) {
+    //     var newBook = "";
+    //     title: title;
+    //     firstName: firstName;
+    //     lastName: lastName;
+    // }
 
 })();
