@@ -1,0 +1,67 @@
+// BOM Lecture 4 MAY 2020
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOM Lecture</title>
+</head>
+<body>
+<h1>BOM</h1>
+<script>
+    (function(){
+        var i = 1;
+        var pillow = "MyPillow";
+        var arr = [1,2,3];
+
+        //console.log(window);
+
+        //alert("Hi, register for my site!");
+        //window.alert("You really should register for my site...");
+
+        // Two arguments for the setInterval method.
+        // - 1: callback function (handler)
+        // - 2: the time. The amount of time (in milliseconds) beofre the code runs again.
+
+        //How to clear the interval ID?
+        // 1 - Set your setInterval method to a variable. This is because the return of your set interval method is an iunterval ID.
+        //2 - Define the stop point. (clearInterval(intervalID))
+
+        var intervalID = setInterval(function() {
+            var yesNo = confirm("Do you like websites chronicling the new surround the murder hornets?");
+            console.log(yesNo);
+            if (yesNo) {
+                alert("I know you just wanted to stop hearing about the murder hornets. I don't blame you, hoenstly.");
+                clearInterval(intervalID);
+            }
+        }, 15000);
+
+        // var intervalID = setInterval(handler, 3000)
+        //console.log(intervalID);
+
+        // setTimeout
+        //
+
+        setTimeout(function() {
+            alert("CONGRATULATIONS! YOU WON!");
+        }, 9000)
+
+        function alertAdBlock() {
+            alert("Hey, stop usiong AdBlocker!");
+        }
+
+        //setTimeout(alertAdBlock, 4500);
+
+        //location object in window
+
+        // window.location = "http://neopets.com";
+
+        if (confirm("Did you make a boo-boo?")) {
+            location.reload();
+        }
+
+
+    })();
+</script>
+</body>
+</html>
