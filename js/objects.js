@@ -209,11 +209,19 @@
      *   `showBookInfo` function.
      */
 
-    // function createBook (title, firstName, lastName) {
-    //     var newBook = "";
-    //     title: title;
-    //     firstName: firstName;
-    //     lastName: lastName;
+    // function createBook (title, authorFirstName, authorLastName) {
+    //     var newBook = {};
+    //     title = title;
+    //     author = {
+    //         firstName: authorFirstName,
+    //         lastName: authorLastName
+    //     }
+    //     return newBook;
+    // }
+    // console.log(createBook());
+    //
+    // function showBookInfo(books) {
+    //
     // }
 
 })();
