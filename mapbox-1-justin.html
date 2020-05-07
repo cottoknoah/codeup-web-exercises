@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox-1-Justin</title>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css' rel='stylesheet' />
+
+    <style>
+        #map {
+            width: 100%;
+            height: 600px;
+        }
+    </style>
+
+    <!--    Mini - Exercise 1 (after customizing map)-->
+    <!--    Create an HTML file called mapbox-1.html-->
+    <!--    In this file, create a Mapbox map that shows your home town. -->
+    <!--    After 5 seconds, have the map automatically change to a map of the entire -->
+    <!--    United States using a satellite style.-->
+
+</head>
+<body>
+
+<div id='map'></div>
+
+<script src="js/keys-2.js"></script>
+
+<script>
+
+    mapboxgl.accessToken = mapboxKey;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 10,
+        center: {lng: -98.4916, lat: 29.4252},
+    });
+
+    // change zoom level
+    // change center of map
+    // change style of map
+
+    setTimeout(function() {
+        map.setZoom(3);
+        map.setCenter({lng: -98.4916, lat: 35.4252});
+        map.setStyle("mapbox://styles//mapbox.satellite-streets-v11")
+    }, 5000);
+
+    //==========creating markers==============//
+    //create map object
+    var marker = new mapboxgl.Marker();
+    // set it
+    // marker.setLngLat ({lng: -98.4916, lat: 29.4252});
+    //which map to add it to
+    // marker.addTo(map);
+    // to remove marker use marker.remove method
+    // to make draggable
+    // marker.setDraggable(true)
+
+    marker
+     .setLngLat({lng: -98.4916, lat: 29.4252});
+     .addTo(map);
+
+    //==========creating popups=================//
+    var popup = new mapboxgl.Popup();
+    //usually popups are attached to markers not maps
+    popup.setHTML("<h3>San Antonio!</h3>");
+    //default behavior it does not pop up until marker clicked on
+    popup.setPopup(marker);
+
+    //==========creating events================//
+    //this is specific to mapbox not DOM
+    //object . method ('type the event listens for,
+    marker.on('dragged', function() {
+        console.log('hello');
+    });
+
+</script>
+
+</body>
+</html>

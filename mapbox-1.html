@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox-1</title>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css' rel='stylesheet' />
+
+    <style>
+        #map {
+        width: 100%;
+        height: 600px;
+        }
+    </style>
+
+<!--    Mini - Exercise 1 (after customizing map)-->
+<!--    Create an HTML file called mapbox-1.html-->
+<!--    In this file, create a Mapbox map that shows your home town. -->
+<!--    After 5 seconds, have the map automatically change to a map of the entire -->
+<!--    United States using a satellite style.-->
+
+</head>
+<body>
+
+<div id='map'></div>
+<div id="menu">
+    <input
+            id="streets-v11"
+            type="radio"
+            name="rtoggle"
+            value="streets"
+            checked="checked"
+    />
+
+    <label for="satellite-v9"></label><input id="satellite-v9" type="radio" name="rtoggle" value="satellite" />
+    <label>satellite</label>
+</div>
+
+<script src='js/keys.js'></script>
+
+<script>
+
+    mapboxgl.accessToken = mapboxKey;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 10,
+        center: {lng: -66.0485001, lat: 18.2341194},
+    });
+
+    var layerList = document.getElementById('menu');
+    var inputs = layerList.getElementsByTagName('input');
+
+    function switchLayer(layer) {
+        var layerId = layer.target.id;
+        map.setStyle('mapbox://styles/mapbox/' + layerId);
+    }
+
+    for (var i = 0; i < inputs.length; i++) {
+        inputs[i].onclick = switchLayer;
+    }
+
+    //===============================//
+
+    var url = 'https://wanderdrone.appspot.com/';
+    map.on('load', function() {
+        var request = new XMLHttpRequest();
+        window.setInterval(function() {
+// make a GET request to parse the GeoJSON at the url
+            request.open('GET', url, true);
+            request.onload = function() {
+                if (this.status >= 200 && this.status < 400) {
+// retrieve the JSON from the response
+                    var json = JSON.parse(this.response);
+
+// update the drone symbol's location on the map
+                    map.getSource('drone').setData(json);
+
+// fly the map to the drone's current location
+                    map.flyTo({
+                        center: {lng: -98.4916, lat: 29.4252},
+                        speed: 0.5,
+                        zoom: 10
+                    });
+                }
+            };
+            request.send();
+        }, 2000);
+
+        //add imagine icon here -cotto
+        map.addSource('drone', { type: 'geojson', data: url });
+        map.addLayer({
+            'id': 'drone',
+            'type': 'symbol',
+            'source': 'drone',
+            'layout': {
+                'icon-image': 'rocket-15'
+            }
+        });
+    });
+
+
+
+</script>
+
+</body>
+</html>
