@@ -54,12 +54,25 @@ Create an array of objects with information about each restaurant to accomplish 
         // center: {lng: -41.65, lat: 14.25}, // titi nane
     });
 
-     reverseGeocode({lng: -66.0485001, lat: 18.2341194}, mapboxKey).then(function(results) {
-        console.log(results);
-        map.setCenter(results);
-        map.setZoom(20);
-        // do something with results
-    });
+    //var foodSpots = [
+    //         {
+    //             name: 'Casa De Mama',
+    //             address: '',
+    //             message: 'Deliciosa'
+    //         },
+    //         {
+    //             name: "La Panaderia",
+    //             address: "",
+    //             message: "Bread is life."
+    //         },
+    //         {
+    //             name: "El Yunque",
+    //             address: "",
+    //             message: "There's a waterfall, enough said!"
+    //         }
+    //     ];
+
+
 
     // geocode("Jardí­n Botánico y Cultural William Miranda Marín,, PR-156, Caguas, 00726, Puerto Rico", mapboxKey).then(function(results) {
     //     console.log(results);
@@ -68,19 +81,85 @@ Create an array of objects with information about each restaurant to accomplish 
     //     // do something with results
     // });
 
-
-    // var marker = new mapboxgl.Marker();
-    // marker
-    //     .setLngLat(geocode(results))
-    //     .addTo(map);
-
-    // var popup = new mapboxgl.Popup()
-    //     .setHTML("<h3>Isla Deliciousa!</h3>");
-    //
-    // marker.setPopup(popup);
-    // marker.setDraggable(true);
+    var marker = new mapboxgl.Marker();
+    marker
+        .setLngLat({lng: -66.0485001, lat: 18.2341194})
+        .addTo(map);
+    var popup = new mapboxgl.Popup()
+        .setHTML("<h3>Casa de Mama</h3>");
+    marker.setPopup(popup);
 
 
+
+
+//===========================JUSTIN'S SOLUTION=====================================//
+//
+//     function geocode(search, token) {
+//         var baseUrl = 'https://api.mapbox.com';
+//         var endPoint = '/geocoding/v5/mapbox.places/';
+//         return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
+//             .then(function(res) {
+//                 return res.json();
+//                 // to get all the data from the request, comment out the following three lines...
+//             }).then(function(data) {
+//                 return data.features[0].center;
+//             });
+//     }
+//
+//
+//     var restaurants = [
+//         {
+//             name: 'Silo',
+//             address: 'Silo: Elevated Cuisine, San Antonio, TX',
+//             message: 'It\'s great!'
+//         },
+//         {
+//             name: 'Chama Gaucha Steakhouse',
+//             address: 'Chama Gaucha Steakhouse, San Antonio, TX',
+//             message: 'Too good!'
+//         },
+//         {
+//             name: 'Tarka Indian Kitchen',
+//             address: 'Tarka Indian Kitchen, San Antonio, TX',
+//             message: 'Awesome!'
+//         }
+//     ];
+//
+//     restaurants.forEach(function(restaurant) {
+//         console.log(restaurant.name)
+//
+//     })
+//     var mapboxkey = "pk.eyJ1Ijoia2NvdHRvIiwiYSI6ImNrOXZoNHg1YzA0bm4za3FuZTVjcThkZXEifQ.723tKsE_Ur6m6DZDahOntA"
+//
+//     restaurants.forEach(function(restaurant) {
+//         geocode(restaurant.address,mapboxkey).then(function(coords) {
+//             console.log(coords)
+//             var marker = new mapboxgl.Marker()
+//                 .setLngLat(coords)
+//                 .addTo(map)
+//             var popup = new mapboxgl.Popup()
+//                 .setHTML('<h3>' + restaurant.name + '</h3>' + '<p>' + restaurant.message + '</p>')
+//             marker.setPopup(popup)
+//         });
+//     });
+
+    function isNumeric(num) {
+        if(num === null || num === true || num === false)
+            return !isNaN(num);
+
+
+        function filterNumbers(arr) {
+            var nums = [];
+            arr.forEach(function(element){
+                console.log(arr);
+                if (isNumeric(element)) {
+                    nums.push(element);
+                }
+                console.log(nums);
+            })
+        }
+
+        console.log(filterNumbers(["fred", true, 5, 3]));
 
 </script>
 
