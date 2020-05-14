@@ -4,15 +4,83 @@
     <title>Konami Code</title>
 </head>
 <body>
-<h1>Konami Code</h1>
+<h1>Knoah's Konami Code</h1>
 
-<script src="/js/jquery.js"></script>
+<script src="/js/jquery-2.2.4.js"></script>
 <script>
     "use strict";
 
-    $(document).keyup(function(event){
-        console.log(event.keyCode);
+    // a key map of allowed keys frm keycode.info
+    // var allowedKeys = {
+    //     13: 'enter',
+    //     37: 'left',
+    //     38: 'up',
+    //     39: 'right',
+    //     40: 'down',
+    //     65: 'a',
+    //     66: 'b'
+    // };
+    $(document).ready(function() {
+        alert('The DOM has finished loading!');
     });
+
+    konami: function() {
+        var konamikeys = [
+            38, // Up
+            38, // Up
+            40, // Down
+            40, // Down
+            37, // Left
+            39, // Right
+            37, // Left
+            39, // Right
+            66, // B
+            65,  // A
+            13 // Enter
+        ];
+        var started = false;
+        var count = 0;
+
+        $(document).keydown(function(e){
+            var reset = function() {
+                started = false;
+                count = 0;
+                return;
+            };
+
+            key = e.keyCode;
+
+    });
+
+        $('h1').click(function(){
+                $(this).css('background-color', '6197B4');
+        }
+
+        $('li').hover(
+            function() {
+                $(this).css('color', 'red');
+            },
+            function() {
+                $(this).css('color', 'black');
+            }
+        );
+    // Use this in an alert
+    // "You have added 30 lives!
+
+    //Ideas for background / audio
+    // function activateCheats() {
+    //     document.body.style.backgroundImage = "url('images/c')";
+    //
+    //     var audio = new Audio('audio/pling.mp3');
+    //     audio.play();
+    //
+    //     alert("cheats activated");
+    // }
+
+
+
+
+
 </script>
 </body>
 </html>
