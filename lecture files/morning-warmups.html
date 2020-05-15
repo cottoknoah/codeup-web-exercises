@@ -199,6 +199,32 @@
     //     return true;
     // }
 
+    //================================
+    // MAY 15th 2020
+
+    // Write a JavaScript function that takes in a string
+    //and returns the number of words in the string.
+    //If the function is ever passed an
+    //argument that is not a string, return the number 0.
+
+    // function warmUp(string) {
+    //     var res = 0;
+    //     for (var i = 0; i < string.length; i++) {
+    //         res === "string"
+    //         return res++;
+    //     }
+    // }
+
+    console.log(warmUp());
+    console.log("1","2,"word");
+
+    function numOfWords(str) {
+        if (typeof str === "string") {
+            return str.split(" ").length;
+        } else {
+            return 0;
+        }
+    }
 
 </script>
 </body>
