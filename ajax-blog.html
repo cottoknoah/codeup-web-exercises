@@ -3,17 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/ajax-blog.css">
     <script src="https://kit.fontawesome.com/da30200d10.js" crossorigin="anonymous"></script>
     <title>So this is my Ajax Blog</title>
 </head>
 <body>
 
-<h1>My Ajax Blog</h1>
+<h1>Knoah's Ajax Blog</h1>
 
-<div id="posts"></div>
+<!--Add a Navbar-->
 
+<!--post your blog sections-->
+
+
+<!--what does this do?-->
+<div class="parallax-window" data-parallax="scroll" data-image-src="img/forest.jpg">
+<div class="container">
+
+    <div class="thead-dark">
+    <div class="row">
+        <div><kbd>Title</kbd></div>
+        <div><kbd>Content</kbd></div>
+        <div><kbd>Date</kbd></div>
+        <div><kbd>Categories</kbd></div>
+    </div>
+    </div>
+
+    <div id="posts"></div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
 
+    $( document ).ready(function() {
+        console.log( "ready!" );
+        "use strict";
+
+        $.getJSON("data/blog.json",function(data){
+            let inventory_data = '';
+            $.each(data, function(key,value){
+                inventory_data += '<div>';
+                inventory_data += '<div>'+ value.title +'</div>';
+                inventory_data += '<div>'+ value.content +'</div>';
+                inventory_data += '<div>'+ value.data +'</div>';
+                inventory_data += '<div>'+ value.categories +'</div>';
+                inventory_data += '</div>' ;
+            });
+            $('#posts').append(inventory_data);
+        });
+
+    });
 
 </script>
 
