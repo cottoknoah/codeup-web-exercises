@@ -23,7 +23,6 @@
     </thead>
     <tbody id="insertProducts"></tbody>
 </table>
-
             <button class="btn btn-secondary" id="refreshBtn">Refresh Inventory</button>
 
         </div>
@@ -38,60 +37,41 @@
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
 
-    //alert of connected data
-    $.get("data/inventory.json").done(function(data, status, jqXhr) {
+    // alert of connected data
+    $.get("data/inventory.json").done(function(data, status) {
         alert("AJAX call completed successfully!");
         console.log("Request status: " + status);
         console.log("Data returned from server:");
         console.log(data);
     });
 
-
     // TODO: Take the data from inventory.json and append it to the products table
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
 
-    // $('#insertProducts').done(function(data){
-    //     //use a for loop or for each
-    //     data.forEach(function(data, status, jqXhr){
-    //     $(this).append
-
-
+    $.getJSON("data/inventory.json",function(data){
+        let inventory_data = '';
+        $.each(data, function(key,value){
+            inventory_data += '<tr>';
+            inventory_data += '<td>'+value.title+'</td>';
+            inventory_data += '<td>'+value.quantity+'</td>';
+            inventory_data += '<td>'+value.price+'</td>';
+            inventory_data += '<td>'+value.categories+'</td>';
+            inventory_data += '</tr>' ;
         });
+        $('#products').append(inventory_data);
     });
 
-    var output = $("#output");
-    var refreshBtn = $("#refreshBtn");
-    var invetory = $.ajax("data/inventory.json");
+    // var refreshBtn = $("#refreshBtn");
 
 
-    var invetoryRefresh = function() {
-
-        inventory.done(function(data) {
-
-            data.forEach(function (data, index ,array) {
-
-                var total = "<tr>";
-                total += ("<td>" + data.title + "</td>");
-                total += ("<td>" + data.quantity + "</td>");
-                total += ("<td>" + data.price + "</td>");
-                total += ("<td>" + data.categories + "</td>");
-                total += "</tr>";
-
-                output.append(total);
-
-
-            });
-
-        });
-    };
-    var refresh = refreshBtn.click(function () {
-        output.html("");
-        invetoryRefresh();
-    });
-
-    invetoryRefresh();
+    // var refresh = refreshBtn.click(function () {
+    //     output.html("");
+    //     invetoryRefresh();
+    // });
+    //
+    // invetoryRefresh();
 
 
 

@@ -67,13 +67,12 @@ $(document).ready (function() {
     	console.log(output);
     	if (output === "Up, Up, Down, Down, Left, Right, Left, Right, B, A, ") {
             $("#secret").html('<h1>You won!</h1>');
-            $("#titleUnlocked").html("Winner, winner! Chicken dinner!")
+            $("#titleUnlocked").html("Winner, winner! Chicken dinner!");
             $("#landing").css("height", "");
             $("#landing").css("display", "none");
             $("#unlocked").css("display", "block");
-    	} else ( output === ["]
-        )
-    }
+    	} else ( output === [""] );
+    };
     //Runs check on submit button click
     $("#submit").click(check);
 
