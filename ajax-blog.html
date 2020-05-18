@@ -11,9 +11,8 @@
 <body>
 
 <!--Navbar-->
-
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-    <!-- Brand -->
+    <!-- Logo -->
     <a class="navbar-brand" href="#"><i class="fas fa-toolbox"></i> Knoah's Toolbox</a>
 
     <!-- Toggler/collapsibe Button -->
@@ -39,10 +38,10 @@
 
 <h1 class="text-center">Ajax Blog</h1>
 
+<p></p>
 
 
 <div class="container">
-
 
     <div class="row">
         <div id="posts"> </div>
@@ -57,7 +56,7 @@
     <script>
 
     $( document ).ready(function() {
-        console.log( "Ready!" );
+        // alert("Welcome to my Blog!");
         "use strict";
 
         $.getJSON("data/blog.json",function(data){
