@@ -51,8 +51,6 @@
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
 
-    // var inventoryRefresh = function() {
-
     $.getJSON("data/inventory.json",function(data){
         let inventory_data = '';
         $.each(data, function(key,value){
