@@ -42,8 +42,9 @@
 <p></p>
 
 
+<div class="parallax"></div>
 <div class="container">
-    <div class="parallax"></div>
+<!--    <div class="parallax"></div>-->
     <div class="row">
         <div id="posts"> </div>
     </div>
@@ -63,10 +64,10 @@
         $.getJSON("data/blog.json",function(data){
             let blog_data = '';
             $.each(data, function(key,value){
-                blog_data += '<div>';
+                blog_data += '<div class="post-content">';
                 blog_data += '<div>'+ '<h3>' + value.title + '</h3>' + '</div>';
                 blog_data += '<div>' + '<p>' + value.content + '</p>' + '</div>';
-                blog_data += '<div>' + value.date + '</div>' + '<br>';
+                blog_data += '<div class="float-right">' + value.date + '</div>' + '<br>';
                 blog_data += '<div>' + "Category Tags: " + value.categories + '</div>';
                 blog_data += '</div>' + '<br>' ;
             });
