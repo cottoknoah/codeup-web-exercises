@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Api Lec</title>
+</head>
+<body>
+
+
+<!--jQuery / not slim since no ajax-->
+<script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+
+<script src="js/keys.js"></script>
+<!--keys to include Mapbox and OpenWeatherMap-->
+
+<script>
+
+    "use strict";
+
+    //send request to OpenWeatherMap OneCall API
+
+    var weatherUrl = "https://api.openweathermap.org/data/2.5/onecall";
+    //send request to above
+    var weatherOptions = {
+    //object propreties
+        lat: 29.4241,
+        lon: -98.4936,
+        appid: OPEN_WEATHER_APPID,
+        exclude: 'minutely, current, hourly',
+        units: 'imperial',
+        timezone: '',
+    };
+
+    function parseDate(timeStamp) {
+        return new Date(timeStamp * 1000).toLocaleDateString();
+    }
+
+    $.get(weatherUrl, weatherOptions).done(function(data){
+        console.log(data.daily[0].humidity);
+        console.log(data.daily[0].temp.max);
+        //[] to reach in an array
+        // . to reach object . to reach property
+        //if you’re using the Date object you
+        // can pass in a ‘timeZone’
+        // property that will format your time according to that property.
+        // var todayDate = new Date(data.daily[0].dt * 1000));
+        // console.log(todayDate.toLocaleDateString()); //display the Unix Timestamp as a human readable date
+        console.log(parseDate(data.daily[0].dt));
+    });
+
+
+    <!--btw query string divided by &-->
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

@@ -38,7 +38,9 @@
         "title": "Thor's Hammer",
         "quantity": 1,
         "categories": [
-            "tool"
+            "tool",
+            "powered",
+            "electric"
         ],
         "price": 999.99
     }
