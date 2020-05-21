@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Weather Map</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/weather_maps.css">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.css' rel='stylesheet'/>
+</head>
+<body>
+
+<!--Could set background to different weather according to API readings-->
+<div class="container">
+
+<!--Input Search-->
+    <div id="search">
+        <input type="text" id="address" name="location" placeholder="Enter: city, state or zipcode">
+        <button id="addressSubmit">Press to Check Weather</button>
+    </div>
+<!--Map-->
+    <div id="maps" class="mapContainer"></div>
+
+<!--Weather forecasts-->
+    <div class="row">
+        <div id="cords"></div>
+        <div id="output" class="content"></div>
+
+    </div>
+
+</div>
+<!--could include social media links-->
+<div id="footer">©Knoah's Weather Map</div>
+
+
+<!-- USED GOOGLE MAPS FOR THIS ONE INSTEAD OF MAPBOX-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeY6rxO_DfMHqMb-ImqzAbL8rhizwY1-s"></script>
+<script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+
+<script src="js/weather_maps.js"></script>
+<script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+<!--keys to include Mapbox, OpenWeatherMap, Keys, Geocoder-->
+</body>
+</html>

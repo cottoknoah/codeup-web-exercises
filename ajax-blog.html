@@ -68,7 +68,7 @@
                 blog_data += '<div>'+ '<h3>' + value.title + '</h3>' + '</div>';
                 blog_data += '<div>' + '<p>' + value.content + '</p>' + '</div>';
                 blog_data += '<div class="float-right">' + value.date + '</div>' + '<br>';
-                blog_data += '<div>' + "Category Tags: " + value.categories + '</div>';
+                blog_data += '<div class="cap">' + "Category Tags: " + value.categories.join(", ") + '</div>';
                 blog_data += '</div>' + '<br>' ;
             });
             $('#posts').append(blog_data);
