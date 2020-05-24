@@ -54,7 +54,6 @@
     };
 
 
-
     //=========Setting up map API options
     var mapOptions = {
         // Set the zoom level
