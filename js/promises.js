@@ -1,15 +1,12 @@
 "use strict";
 
-var url = 'https://api.github.com/user';
-
-//curl
+var url = 'https://api.github.com/users';
 
 var githubAPI = fetch(url, {
     headers: {
         'Authorization': `token ${GITHUB_API_KEY}`
     }
 });
-
 
 
 fetch('https://api.github.com/users')
@@ -43,6 +40,5 @@ request.then(message => console.log('Promise resolved!', message));
 request.catch(message => console.log('Promise rejected!', message));
 // if rejected, will log "Promise rejected!" and "Network Connection Error!"
 
-// console.log(githubAPI);
 
 
