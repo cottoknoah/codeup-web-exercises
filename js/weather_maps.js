@@ -1,4 +1,4 @@
-(function() {
+(function (listener) {
     //==========Variables Below==========================//
     var address = "http://api.openweathermap.org/data/2.5/forecast/daily"; // Open Weather URL
     var APPID = "7f8e3aa0aad113510e0c1eaafd1c17b8"; // Open Weather APP ID
@@ -38,9 +38,8 @@
                 output.html(outputString);
 
             });
-            //assigning Today, tomorrow and next two days for box banners
-            // exercise asks for 5 day forecast
-            // why not do the entire week?
+            //assigned just Today, tomorrow and next two days for box banners
+            // could incorporate another option for full week forecast
             for (i = 0; i < 3; i++) {
                 if (i === 0) {
                     document.getElementsByClassName("boxBanner")[i].innerHTML = "Today";
@@ -89,12 +88,12 @@
     //Updates lot/long based on dragged marker location
     //if under codeAddress function it will duplicate when marker is dragged
 
-    marker.addListener('mouseup', function() {
+    marker.addListener('mouseup', function () {
         myLatlng = marker.getPosition();
         lat = myLatlng.lat();
         long = myLatlng.lng();
         latLongString = "";
-        latLongString += "Lat: "+ parseFloat(lat).toFixed(2) + ", Long: " + parseFloat(long).toFixed(2);
+        latLongString += "Lat: " + parseFloat(lat).toFixed(2) + ", Long: " + parseFloat(long).toFixed(2);
         latLong.html(latLongString);
         latLongString = "";
         outputString = "";
@@ -107,7 +106,6 @@
 
     //should I use geocoder from files???
     //allows user input of address for weather lookup
-
 
     function codeAddress() {
         var address = document.getElementById('address').value; //Grabs value in address input
@@ -143,3 +141,27 @@
     getWeather();
 
 })();
+
+
+//////////////////////////////////////////
+
+// RETURN CREATE FORM
+//    lock this down in security
+//validation if there is no logged in user
+@GetMapping("/services/create")
+public String showServiceForm(Model model){
+    try {
+        User loggedInUser = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+    } catch (Exception e){
+        e.printStackTrace();
+        return "redirect:/";
+    }
+    User loggedInUser = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+//        System.out.println("loggedInUser.getUsername() = " + loggedInUser.getUsername()); --prints out twice -K
+    if(!loggedInUser.isBarber()) {
+//            throw not barber error
+        return "redirect:/";
+    }
+    model.addAttribute("Service", new Service());
+    return "services/create";
+}
