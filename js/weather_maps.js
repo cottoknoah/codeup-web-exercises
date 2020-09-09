@@ -148,20 +148,20 @@
 // RETURN CREATE FORM
 //    lock this down in security
 //validation if there is no logged in user
-@GetMapping("/services/create")
-public String showServiceForm(Model model){
-    try {
-        User loggedInUser = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-    } catch (Exception e){
-        e.printStackTrace();
-        return "redirect:/";
-    }
-    User loggedInUser = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-//        System.out.println("loggedInUser.getUsername() = " + loggedInUser.getUsername()); --prints out twice -K
-    if(!loggedInUser.isBarber()) {
-//            throw not barber error
-        return "redirect:/";
-    }
-    model.addAttribute("Service", new Service());
-    return "services/create";
-}
+// @GetMapping("/services/create")
+// public String showServiceForm(Model model){
+//     try {
+//         User loggedInUser = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+//     } catch (Exception e){
+//         e.printStackTrace();
+//         return "redirect:/";
+//     }
+//     User loggedInUser = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+// //        System.out.println("loggedInUser.getUsername() = " + loggedInUser.getUsername()); --prints out twice -K
+//     if(!loggedInUser.isBarber()) {
+// //            throw not barber error
+//         return "redirect:/";
+//     }
+//     model.addAttribute("Service", new Service());
+//     return "services/create";
+// }
