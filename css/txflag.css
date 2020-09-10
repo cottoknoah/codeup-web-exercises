@@ -1,3 +1,8 @@
+/** {*/
+/*  !*testing if CSS is connected*!*/
+/*  background-color: yellow;*/
+/*}*/
+
 * {
   box-sizing: border-box;
 }
@@ -16,12 +21,41 @@
   margin: 10px;
 }
 
-.box2 {
 
+/* {
+//  box-sizing: border-box;
+//}
+//
+//.root {
+//  --main-bg: #181818;
+//  --link-color: red;
+//  --separator-color: #ffffff;
+//  --light-bg: blue;
+//}
+//
+//.flag {
+//  position: relative;
+//  width: 500px;
+//  height: 500px;
+//  margin: 10px;
+//}
+//
+$black: #333;
+$red: #e51400;
+$lightBlue: #0065bd;
+
+
+body {background: slategrey}
+
+.FLAG {
+  margin: 1em;
+  height: 150px;
+  width: 200px;
+  float: left;
 }
 
 
-.cuba {
+.puertorico {
   background: -webkit-linear-gradient(top, $lightBlue 20%, white 20%, white 40%, $lightBlue 40%, $lightBlue 60%, white 60%, white 80%, $lightBlue 80%, $lightBlue 80%);
   background: linear-gradient(to bottom, $lightBlue 20%, white 20%, white 40%, $lightBlue 40%, $lightBlue 60%, white 60%, white 80%, $lightBlue 80%, $lightBlue 80%);
 
@@ -88,3 +122,5 @@
 }
 }
 }
+
+//https://codepen.io/m3uc/pen/KaqrG
