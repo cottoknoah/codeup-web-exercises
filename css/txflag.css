@@ -9,19 +9,38 @@
 }
 
 .red-bg {
-  background-color: red;
+  /*background-color: red;*/
+  border-top: 50px solid red;
+  border-bottom: 50px solid red;
 }
 
 .white-bg {
+  border-top: 50px solid red;
   background-color: white;
+  /*border: 1px solid red;*/
+
 }
 
 .blue {
-  width: 220px;
-  height: 400px;
-  background-color: blue;
+  /*width: 220px;*/
+  /*height: 400px;*/
+  background-color: yellow;
   float: left;
+  border-top: 50px solid red;
+  border-left: 100px solid blue;
+  border-bottom: 70px solid red;
+  /*border: 1px solid red;*/
 }
+
+#triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-left: 100px solid red;
+  border-bottom: 50px solid transparent;
+}
+
+
 
 .rectangle {
   width: 500px;
@@ -30,6 +49,7 @@
 
 }
 
+/*https://css-tricks.com/the-shapes-of-css/*/
 
 #star-five {
   margin: 50px 0;
@@ -71,13 +91,4 @@
   border-left: 100px solid transparent;
   transform: rotate(-70deg);
   content: '';
-}
-
-
-#triangle-right {
-  width: 0;
-  height: 0;
-  border-top: 50px solid transparent;
-  border-left: 100px solid red;
-  border-bottom: 50px solid transparent;
 }
