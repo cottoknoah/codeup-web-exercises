@@ -11,11 +11,12 @@
 .red-bg {
   /*background-color: red;*/
   border-top: 50px solid red;
-  border-bottom: 50px solid red;
+  border-bottom: 80px solid red;
 }
 
 .white-bg {
-  border-top: 50px solid red;
+  border-top: 80px solid red;
+  border-bottom: 30px solid red;
   background-color: white;
   /*border: 1px solid red;*/
 
@@ -32,13 +33,6 @@
   /*border: 1px solid red;*/
 }
 
-#triangle-right {
-  width: 0;
-  height: 0;
-  border-top: 50px solid transparent;
-  border-left: 100px solid red;
-  border-bottom: 50px solid transparent;
-}
 
 
 
