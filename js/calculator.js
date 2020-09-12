@@ -67,8 +67,4 @@
     btnNum9.addEventListener("click", handleNum);
 
 
-
-
-
-
 })();
