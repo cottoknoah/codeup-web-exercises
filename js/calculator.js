@@ -50,7 +50,7 @@
     };
 
 
-//create button listerners
+//create button listeners
     btnClear.addEventListener("click", clear);
 
 
