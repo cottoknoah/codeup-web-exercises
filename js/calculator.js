@@ -11,8 +11,8 @@
     var btnDivide = document.getElementById("btnDivide");
     var btnMultipy = document.getElementById("btnMultiply");
 
+    //where we will see the output
     var outputWindow = document.getElementById("outputWindow");
-
 
 
 //numbers -add listner
