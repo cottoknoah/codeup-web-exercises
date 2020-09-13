@@ -9,13 +9,13 @@
     var btnAdd = document.getElementById("btnAdd");
     var btnSubtract = document.getElementById("btnSubtract");
     var btnDivide = document.getElementById("btnDivide");
-    var btnMultipy = document.getElementById("btnMultiply");
+    var btnMultiply = document.getElementById("btnMultiply");
 
     //where we will see the output
     var outputWindow = document.getElementById("outputWindow");
 
 
-//numbers -add listner
+//numbers -add listener
 
     var btnNum0 = document.getElementById("btnNum0");
     var btnNum1 = document.getElementById("btnNum1");
@@ -43,11 +43,11 @@
         } else {
             outputWindow.innerHTML += this.innerHTML;
         }
-    }
+    };
 
     var clear = function(event) {
         outputWindow.innerHTML= 0.0
-    }
+    };
 
 
 //create button listerners
