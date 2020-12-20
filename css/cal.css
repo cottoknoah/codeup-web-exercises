@@ -32,6 +32,15 @@
     -fx-text-fill: #111;
 }
 
+.read-button:hover {
+    -fx-background-color: #0000CC;
+    -fx-text-fill: #EEE;
+}
+
+.delete-button:hover {
+    -fx-background-color: #CC0000;
+    -fx-text-fill: #EEE;
+}
 
 
 .container {
