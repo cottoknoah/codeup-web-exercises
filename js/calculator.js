@@ -2,34 +2,33 @@
 
 // create variables for standard buttons
 
-    var btnClear = document.getElementById("btnClear");
-    var btnSign = document.getElementById("btnSign");
-    var btnFloat = document.getElementById("btnFloat");
-    var btnEquals = document.getElementById("btnEquals");
-    var btnAdd = document.getElementById("btnAdd");
-    var btnSubtract = document.getElementById("btnSubtract");
-    var btnDivide = document.getElementById("btnDivide");
-    var btnMultiply = document.getElementById("btnMultiply");
+    const btnClear = document.getElementById("btnClear");
+    const btnSign = document.getElementById("btnSign");
+    const btnFloat = document.getElementById("btnFloat");
+    const btnEquals = document.getElementById("btnEquals");
+    const btnAdd = document.getElementById("btnAdd");
+    const btnSubtract = document.getElementById("btnSubtract");
+    const btnDivide = document.getElementById("btnDivide");
+    const btnMultiply = document.getElementById("btnMultiply");
 
     //where we will see the output
-    var outputWindow = document.getElementById("outputWindow");
-
+    const outputWindow = document.getElementById("outputWindow");
 
 //numbers -add listener
 
-    var btnNum0 = document.getElementById("btnNum0");
-    var btnNum1 = document.getElementById("btnNum1");
-    var btnNum2 = document.getElementById("btnNum2");
-    var btnNum3 = document.getElementById("btnNum3");
-    var btnNum4 = document.getElementById("btnNum4");
-    var btnNum5 = document.getElementById("btnNum5");
-    var btnNum6 = document.getElementById("btnNum6");
-    var btnNum7 = document.getElementById("btnNum7");
-    var btnNum8 = document.getElementById("btnNum8");
-    var btnNum9 = document.getElementById("btnNum9");
+    const btnNum0 = document.getElementById("btnNum0");
+    const btnNum1 = document.getElementById("btnNum1");
+    const btnNum2 = document.getElementById("btnNum2");
+    const btnNum3 = document.getElementById("btnNum3");
+    const btnNum4 = document.getElementById("btnNum4");
+    const btnNum5 = document.getElementById("btnNum5");
+    const btnNum6 = document.getElementById("btnNum6");
+    const btnNum7 = document.getElementById("btnNum7");
+    const btnNum8 = document.getElementById("btnNum8");
+    const btnNum9 = document.getElementById("btnNum9");
 
-    var num1;
-    var num2;
+    // const num1;
+    // const num2;
 
 //where all my math happens -- output goes
     outputWindow.innerHTML = 0.0;
@@ -37,7 +36,7 @@
 
 
 //rest of code goes in middle
-    var handleNum = function(event) {
+    const handleNum = function(event) {
         if (outputWindow.innerHTML == 0.0) {
             outputWindow.innerHTML = this.innerHTML;
         } else {
@@ -45,14 +44,12 @@
         }
     };
 
-    var clear = function(event) {
-        outputWindow.innerHTML= 0.0
+    const clear = function (event) {
+        outputWindow.innerHTML = 0.0;
     };
-
 
 //create button listeners
     btnClear.addEventListener("click", clear);
-
 
 //numbers
     btnNum0.addEventListener("click", handleNum);
