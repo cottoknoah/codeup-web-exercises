@@ -76,4 +76,14 @@ div {
     grid-area: 4 / 5 / 6 / 9;
 }
 
+.div10 {
+    background-color: purple;
+    grid-area: 4 / 5 / 6 / 9;
+}
+
+.div11 {
+    background-color: aqua;
+    grid-area: 4 / 5 / 6 / 9;
+}
+
 
