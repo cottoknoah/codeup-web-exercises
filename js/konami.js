@@ -2,8 +2,8 @@ $(document).ready (function() {
 	"use strict";
 
     //Numeric variables
-    var output = "";
-    var bucket = [];
+    let output = "";
+    let bucket = [];
 
     //switch case
     $(document).keyup(function(event){
